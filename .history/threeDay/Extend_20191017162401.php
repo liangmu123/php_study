@@ -1,0 +1,39 @@
+<?php
+    class Parent {
+
+        var $title;
+
+        function setTitle($title){
+            $this->title = $title;
+        }
+
+        function getTitle(){
+            return $this->title;
+        }
+
+    }
+
+    class Child extends Parent {
+
+        var $category;
+
+        function setCate($cate){
+            $this->category = $cate;
+        }
+
+        function getCate(){
+            return $this->category;
+        }
+
+        function getTitle(){
+            return $this->title . "孩子";
+         }
+
+    }
+
+    $child = new Child();
+
+    $child->setTitle("孩子");
+
+
+?>
